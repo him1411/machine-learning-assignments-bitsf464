@@ -1,0 +1,7 @@
+
+
+zero ka mu and sigma square
+-0.734813608126 0.057660014683
+
+one ka mu and sigma
+-0.917773065212 0.073896710032
