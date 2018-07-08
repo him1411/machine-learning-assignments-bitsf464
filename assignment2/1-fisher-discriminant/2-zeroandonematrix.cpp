@@ -15,16 +15,19 @@ using namespace std;
 #define rev(A) reverse((A).begin(), (A).end())
 #define sorv(A) sort((A).begin(), (A).end())
 
+// Creating zero and one matrix
 int32_t main()
 {
     IOS;
-    vector<vector<float> > mat1(30000),mat0(30000);
+    vector<vector<float> > mat1(30000),mat0(30000); // Two matrices of size 30000
     int rows = 27750,temp1,mat0size=0,mat1size=0;
     float temp2;
     for (int i = 0; i <rows ; ++i)
     {
         cin>>temp1;
         trace2(i,temp1);
+        
+        // Pushing values with t=1
         if (temp1==1)
         {
             for (int j = 0; j < 58 ; ++j)
@@ -35,6 +38,8 @@ int32_t main()
             mat1size++;
             
         }
+        
+        // Pushing values with t=0
         if (temp1==0)
         {   
             for (int j = 0; j < 58 ; ++j)
@@ -45,6 +50,7 @@ int32_t main()
             mat0size++;
         }
     }
+    // Printing zero matrix
     for (int i = 0; i < mat0size; ++i)
     {
         for (int j = 0; j < 58; ++j)
@@ -54,6 +60,8 @@ int32_t main()
         cout<<endl;
     }
     cout<<endl<<endl;
+    
+    // Printing zero matrix
     for (int i = 0; i < mat1size; ++i)
     {
         for (int j = 0; j < 58; ++j)
