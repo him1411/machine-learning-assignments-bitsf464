@@ -14,7 +14,7 @@ using namespace std;
 #define PI 3.14159265359
 #define rev(A) reverse((A).begin(), (A).end())
 #define sorv(A) sort((A).begin(), (A).end())
-
+// This program returns value of t
 int32_t main()
 {
     IOS;
@@ -23,10 +23,10 @@ int32_t main()
     {
     	if (n>1400)
     	{
-    		cout<<1<<endl;
+    		cout<<1<<endl;              // returns 1 if input > 1400
     	}
     	else
-    		cout<<0<<endl;
+    		cout<<0<<endl;              // returns 0 if input <= 1400
     }
     return 0;
 }
