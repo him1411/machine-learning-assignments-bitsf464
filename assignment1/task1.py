@@ -21,7 +21,7 @@ def implementation ():
         print("Polynomial of degree "+str(i)+" is "+str(z)+"\n")
         plot.plot(Xp,num.polyval(z,Xp),str(color[i]))
         warnings.simplefilter('ignore', num.RankWarning)
-        plot.show()
+        plot.show()   #this will plot the result
 
 
 if __name__ == "__main__":
