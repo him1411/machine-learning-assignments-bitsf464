@@ -15,7 +15,7 @@ using namespace Eigen;
 #define rev(A) reverse((A).begin(), (A).end())
 #define sorv(A) sort((A).begin(), (A).end())
 
-
+//Function for multiplication
 vector<vector<ld>> multiply(vector<vector<ld>> &mat1,int mat1row,int mat1col, vector<vector<ld>> &mat2, int mat2col)
 {
     vector<vector<ld>> result(mat1row);
@@ -33,18 +33,20 @@ vector<vector<ld>> multiply(vector<vector<ld>> &mat1,int mat1row,int mat1col, ve
     }
     return result;
 }
-
+// Program to calculating projections and calculating parameters for normal distribution
 int32_t main()
 {
     IOS;
     float temp;
     vector<vector<float> > m(1),mat1(58);
+    // Pushing m matrix
     for (int i = 0; i < 58; ++i)
     {
         cin>>temp;
         m[0].push_back(temp);
     }
     int rows =13609;
+    //Pushing one matrix
     for (int i = 0; i <rows ; ++i)
     {
         for (int j = 0; j < 58 ; ++j)
@@ -54,8 +56,10 @@ int32_t main()
             mat1[j].push_back(temp2);
         }        
     }
-    vector<vector<float>> mat2 = multiply(m,1,58,mat1,rows);
+    vector<vector<float>> mat2 = multiply(m,1,58,mat1,rows); //Multiplying m and one matrix
     float sum =0;
+    
+    // Calculating mu for normal distribution
     for (int i = 0; i < mat2.size(); ++i)
     {
         for (int j = 0; j < mat2[0].size(); ++j)
@@ -65,6 +69,8 @@ int32_t main()
     }
     sum = sum / rows;
     float variance =0;
+    
+    // Calculating sigma for normal distribution
     for (int i = 0; i < mat2.size(); ++i)
     {
         for (int j = 0; j < mat2[0].size(); ++j)
