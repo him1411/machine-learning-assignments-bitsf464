@@ -15,6 +15,7 @@ using namespace std;
 #define rev(A) reverse((A).begin(), (A).end())
 #define sorv(A) sort((A).begin(), (A).end())
 
+// Calculating averages of zero and one matrices
 int32_t main()
 {
     IOS;
@@ -26,6 +27,8 @@ int32_t main()
     {
     	cin>>temp1;
     	trace2(i,temp1);
+        
+        // Pushing values with t=1 
     	if (temp1==1)
     	{
     		for (int j = 0; j < 58 ; ++j)
@@ -34,6 +37,8 @@ int32_t main()
     			mat1[j].push_back(temp2);
     		}
     	}
+        
+        // Pushing values with t=0
     	else if (temp1==0)
     	{
     		for (int j = 0; j < 58 ; ++j)
@@ -43,6 +48,8 @@ int32_t main()
     		}
     	}
     }
+    
+    // Calculating average of zero matrix
     for (int i = 0; i <58 ; ++i)
     {
     	float avg =0;
@@ -54,6 +61,8 @@ int32_t main()
     	cout<<avg<<endl;
     }
     cout<<endl<<endl;
+    
+    // Calculating average of one matrix
     for (int i = 0; i <58 ; ++i)
     {
     	float avg =0;
