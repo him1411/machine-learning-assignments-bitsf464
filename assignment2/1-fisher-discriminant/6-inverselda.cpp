@@ -13,7 +13,7 @@ using namespace Eigen;
 #define trace3(x, y, z)    cerr<<#x<<":" <<x<<" | "<<#y<<": "<<y<<" | "<<#z<<": "<<z<<endl
 #define rev(A) reverse((A).begin(), (A).end())
 #define sorv(A) sort((A).begin(), (A).end())
-
+// Program to calculate inverse of LDA  
 int32_t main()
 {
     IOS;
@@ -30,24 +30,28 @@ int32_t main()
 	}
 	m = m.inverse();
 	vector<float> v1,v2;
+	// Pushing average of one matrix into v1 
 	for (int i = 0; i < 58; ++i)
 	{
 		float temp;
 		cin>>temp;
 		v1.push_back(temp);
 	}
+	// Pushing average of zero matrix into v2
 	for (int i = 0; i < 58; ++i)
 	{
 		float temp;
 		cin>>temp;
 		v2.push_back(temp);
 	}
+	// Difference of v1 and v2
 	for (int i = 0; i <58 ; ++i)
 	{
 		m2(i,0) = v1[i] - v2[i];
 	}
 
 	Matrix<float, 58, 1> m3 = m * m2;
+	// Creating arbitrary vector in direction of Sw inverse* (m2 - m1)
 	m3 = 10000*m3;
 	Matrix<float, 1, 58> m4 = m3.transpose();
 	cout<<fixed<<setprecision(12)<<m4;
