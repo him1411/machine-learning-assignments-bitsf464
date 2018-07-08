@@ -15,7 +15,7 @@ using namespace std;
 #define PI 3.14159265359
 #define rev(A) reverse((A).begin(), (A).end())
 #define sorv(A) sort((A).begin(), (A).end())
-
+// Function for multiplying two matrices
 vector<vector<ld>> multiply(vector<vector<ld>> &mat1,int mat1row,int mat1col, vector<vector<ld>> &mat2, int mat2col)
 {
     vector<vector<ld>> result(mat1row);
@@ -35,7 +35,7 @@ vector<vector<ld>> multiply(vector<vector<ld>> &mat1,int mat1row,int mat1col, ve
     return result;
 }
 
-
+// Calculating transpose of Matrix
 vector<vector<float>> transpose(vector< vector<float> > vect)
 {
     vector< vector<float> > result(vect[0].size());
@@ -49,7 +49,7 @@ vector<vector<float>> transpose(vector< vector<float> > vect)
     }
     return result;
 }
-
+// Program for Fisher LDA
 int32_t main()
 {
     IOS;
@@ -63,6 +63,8 @@ int32_t main()
    		}
    	}
     int row =14140;float temp;
+	
+    //Pushing average matrix	
     for (int i = 0; i < 58; ++i)
     {
     	cin>>temp;
@@ -71,17 +73,19 @@ int32_t main()
     for (int i = 0; i < row; ++i)
     {
     	vector<vector<float> > zero(1);
+	// Pusing zero matrix
     	for (int j = 0; j < 58; ++j)
     	{
     		cin>>temp;
     		zero[0].push_back(temp);
     	}
+	// Subtractng means
     	for (int j = 0; j < 58; ++j)
     	{
     		zero[0][j] -= avg[j];
     	}
 	    vector<vector<float>> zerot = transpose(zero);
-		vector<vector<float>> temp2 = multiply(zerot,58,1,zero,58);
+		vector<vector<float>> temp2 = multiply(zerot,58,1,zero,58);  // Multiplying zero transpose with zero matrix
 		for (int i = 0; i < 58; ++i)
 	   	{
 	   		for (int j = 0; j < 58; ++j)
