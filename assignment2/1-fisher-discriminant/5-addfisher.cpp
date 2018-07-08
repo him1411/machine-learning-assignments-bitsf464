@@ -16,12 +16,12 @@ using namespace std;
 #define rev(A) reverse((A).begin(), (A).end())
 #define sorv(A) sort((A).begin(), (A).end())
 
-
+// Summing all multiplications 
 int32_t main()
 {
     IOS;
     vector<vector<float> > zero(58),one(58),result(58);
-
+    // Pushing zero matrix
     for (int i = 0; i < 58; ++i)
     {
     	for (int j = 0; j < 58; ++j)
@@ -31,7 +31,7 @@ int32_t main()
     		zero[i].push_back(temp);
     	}
     }
-
+    // Pushing one matrix
     for (int i = 0; i < 58; ++i)
     {
     	for (int j = 0; j < 58; ++j)
@@ -41,6 +41,7 @@ int32_t main()
     		one[i].push_back(temp);
     	}
     }
+    //Adding zero and one matrix
     for (int i = 0; i < 58; ++i)
     {
     	for (int j = 0; j < 58; ++j)
