@@ -39,7 +39,7 @@ int32_t main()
     IOS;
     float temp;
     vector<vector<float> > m(1),mat1(58);
-    // Pushing m matrix
+    // Pushing weight matrix
     for (int i = 0; i < 58; ++i)
     {
         cin>>temp;
