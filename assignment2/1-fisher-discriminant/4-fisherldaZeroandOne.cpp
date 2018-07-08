@@ -49,7 +49,7 @@ vector<vector<float>> transpose(vector< vector<float> > vect)
     }
     return result;
 }
-// Program for Fisher LDA
+// Program for Fisher LDA for zero matrix and one matrix
 int32_t main()
 {
     IOS;
